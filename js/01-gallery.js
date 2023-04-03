@@ -7,7 +7,6 @@ const galleryMarkup = createGalelry(galleryItems);
 
 galleryContainer.insertAdjacentHTML("beforeend", galleryMarkup);
 galleryContainer.addEventListener("click", onGalleryContainerClick);
-// document.body.addEventListener("keydown", onDocumentKeydown);
 
 function createGalelry(galleryItems) {
   return galleryItems
@@ -42,13 +41,3 @@ function onGalleryContainerClick(evt) {
 
   instance.show();
 }
-
-// function onDocumentKeydown(evt) {
-//     console.log(document.querySelector(".basicLightbox .basicLightbox--img"));
-
-//   if (evt.key !== "Escape" && ModalIsOpen === null) {
-//     return;
-//   }
-
-//   ModalIsOpen.classList.remove("basicLightbox--visible");
-// }
