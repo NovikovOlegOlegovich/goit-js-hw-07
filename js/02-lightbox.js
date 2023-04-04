@@ -22,13 +22,7 @@ function createGalelry(galleryItems) {
 }
 
 function onGalleryContainerClick(evt) {
-  evt.preventDefault();
-
-  if (!evt.target.classList.contains("gallery__image")) {
-    return;
-  }
-
-  var modal = new SimpleLightbox(".gallery .gallery__link", {
+  const modal = new SimpleLightbox(".gallery .gallery__link", {
     captionsData: "alt",
     captionDelay: 250,
   });
