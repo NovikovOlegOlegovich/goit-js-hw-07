@@ -22,6 +22,7 @@ function createGalelry(galleryItems) {
 }
 
 function onGalleryContainerClick(evt) {
+  evt.preventDefault();
   const modal = new SimpleLightbox(".gallery .gallery__link", {
     captionsData: "alt",
     captionDelay: 250,
