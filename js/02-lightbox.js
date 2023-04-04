@@ -3,12 +3,11 @@ import { galleryItems } from "./gallery-items.js";
 
 const galleryContainer = document.querySelector(".gallery");
 
-const galleryMarkup = createGalelry(galleryItems);
+const galleryMarkup = createGalery(galleryItems);
 
 galleryContainer.insertAdjacentHTML("beforeend", galleryMarkup);
-galleryContainer.addEventListener("click", onGalleryContainerClick);
 
-function createGalelry(galleryItems) {
+function createGalery(galleryItems) {
   return galleryItems
     .map(({ preview, original, description }) => {
       return `
@@ -21,12 +20,7 @@ function createGalelry(galleryItems) {
     .join("");
 }
 
-function onGalleryContainerClick(evt) {
-  evt.preventDefault();
   const modal = new SimpleLightbox(".gallery .gallery__link", {
     captionsData: "alt",
     captionDelay: 250,
   });
-
-  modal.open();
-}
